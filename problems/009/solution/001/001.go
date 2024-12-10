@@ -1,18 +1,20 @@
 package main
 
-func RemoveElement(nums []int, val int) int {
-	j := 0
+import (
+	"strconv"
+)
 
-	for i := 0; i < len(nums)-1; i++ {
-
-		if nums[i] != val {
-			// se o valor for o mesmo, para não modificar
-			if j != i {
-				nums[j] = nums[i]
-			}
-			j++
-		}
+func isPalindrome(x int) bool {
+	if x <= 0 {
+		return false
 	}
+	value := strconv.Itoa(x)
+	return value == reverse(value)
+}
 
-	return j
+func reverse(text string) (result string) {
+	for _, char := range text {
+		result = string(char) + result
+	}
+	return
 }

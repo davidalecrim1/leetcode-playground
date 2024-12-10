@@ -1,27 +1,65 @@
 package main
 
-import (
-	"reflect"
-	"testing"
-)
+import "testing"
 
-func TestRemoveElement(t *testing.T) {
+func TestIsPalindrome(t *testing.T) {
 
-	assertExpectedSlice := func(t testing.TB, nums []int, got int, expect []int) {
-		if !reflect.DeepEqual(expect, nums[:got]) {
-			t.Errorf("got %v, expect %v", nums[:got], expect)
-		}
+	tests := []struct {
+		scenario string
+		input    int
+		want     bool
+	}{
+		{
+			scenario: "negative number invalid",
+			input:    -123321,
+			want:     false,
+		},
+		{
+			scenario: "zero number invalid",
+			input:    0,
+			want:     false,
+		},
+		{
+			scenario: "two digit invalid",
+			input:    10,
+			want:     false,
+		},
+		{
+			scenario: "two digit valid",
+			input:    11,
+			want:     true,
+		},
+		{
+			scenario: "three digit invalid",
+			input:    123,
+			want:     false,
+		},
+		{
+			scenario: "three digit valid",
+			input:    121,
+			want:     true,
+		},
+		{
+			scenario: "seven digit valid",
+			input:    1237321,
+			want:     true,
+		},
+		{
+			scenario: "seven digit invalid",
+			input:    1237331,
+			want:     false,
+		},
 	}
 
-	t.Run("remove val 3", func(t *testing.T) {
-		nums := []int{3, 2, 2, 3}
-		got := RemoveElement(nums, 3)
-		assertExpectedSlice(t, nums, got, []int{2, 2})
-	})
+	for _, tt := range tests {
+		executeTest := func(t *testing.T) {
+			got := isPalindrome(tt.input)
 
-	t.Run("remove val 2", func(t *testing.T) {
-		nums := []int{0, 1, 2, 2, 3, 0, 4, 2}
-		got := RemoveElement(nums, 2)
-		assertExpectedSlice(t, nums, got, []int{0, 1, 3, 0, 4})
-	})
+			if got != tt.want {
+				t.Errorf("expected %v, got %v", tt.want, got)
+			}
+		}
+
+		t.Run(tt.scenario, executeTest)
+	}
 }
