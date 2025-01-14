@@ -2,9 +2,10 @@ package main
 
 import "testing"
 
-func Test_hammingWeight(t *testing.T) {
+func Test_getSum(t *testing.T) {
 	type args struct {
-		n int
+		a int
+		b int
 	}
 	tests := []struct {
 		name string
@@ -12,45 +13,34 @@ func Test_hammingWeight(t *testing.T) {
 		want int
 	}{
 		{
-			name: "11 has three set bits",
+			name: "test case 001",
 			args: args{
-				n: 11,
+				a: 2,
+				b: 3,
+			},
+			want: 5,
+		},
+		{
+			name: "test case 002",
+			args: args{
+				a: 3,
+				b: 3,
+			},
+			want: 6,
+		},
+		{
+			name: "test case 003",
+			args: args{
+				a: 1,
+				b: 2,
 			},
 			want: 3,
-		},
-		{
-			name: "one has one set bit",
-			args: args{
-				n: 1,
-			},
-			want: 1,
-		},
-		{
-			name: "27 has four set bits",
-			args: args{
-				n: 27,
-			},
-			want: 4,
-		},
-		{
-			name: "128 has four set bits",
-			args: args{
-				n: 128,
-			},
-			want: 1,
-		},
-		{
-			name: "2147483645 has 30 set bit",
-			args: args{
-				n: 2147483645,
-			},
-			want: 30,
 		},
 	}
 	for _, tt := range tests {
 		t.Run(tt.name, func(t *testing.T) {
-			if got := hammingWeight(tt.args.n); got != tt.want {
-				t.Errorf("hammingWeight() = %v, want %v", got, tt.want)
+			if got := getSum(tt.args.a, tt.args.b); got != tt.want {
+				t.Errorf("getSum() = %v, want %v", got, tt.want)
 			}
 		})
 	}
