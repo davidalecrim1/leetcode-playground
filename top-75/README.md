@@ -14,6 +14,9 @@ The goal is to use this problem list to Pareto the best problems to learn the mo
 | 012 | Easy | [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/description/)                               | parse to base 2 (go: strconv) and use count of values.                                                                                                                        |
 | 014 | Easy | [268. Missing Number](https://leetcode.com/problems/missing-number/description/)                                   | solution 1: calculate the sum of the array minus the given array using a variable with len(nums); solution 2: sort the array and check with the index (but it is O(n log n)). |
 | 015 | Easy | [190. Reverse Bits](https://leetcode.com/problems/reverse-bits/description/)                                       | Format the input as binary string and reverse the string with a loop.                                                                                                         |
+| 016 | Easy | [70. Climbing Stairs](https://leetcode.com/problems/climbing-stairs/description/)                                  | fibbonaci sequence with recursion on n-1 + n-2                                                                                                                                |
+| 022 | Easy | [198. House Robber](https://leetcode.com/problems/house-robber/description/)                                       | Use a memoization array and calculate the max of (n - 1 OR n -2 + current.)                                                                                                   |
+| 038 | Easy | [Meeting Room](https://neetcode.io/problems/meeting-schedule)                                                      | sort the array and compare start and end.                                                                                                                                     |
 
 
 
