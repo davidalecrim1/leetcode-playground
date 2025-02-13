@@ -25,7 +25,11 @@ The goal is to use this problem list to Pareto the best problems to learn the mo
 
 | 055 | Easy | [Valid Parenthesis](https://leetcode.com/problems/valid-parentheses/description/)                                    | Use a stack with a hashmap for the parenthesis.                                                                                                                                                                       |
 | 056 | Easy | [Valid Palindrome](https://leetcode.com/problems/valid-palindrome/description/)                                    | Use unicode lib with two pointers to walk from the beginning and end.                                                                                                                                                           |
-
+| 060 | Easy | [Maximum Depth of Binary Tree](https://leetcode.com/problems/maximum-depth-of-binary-tree/description/)                                    | Use Depth For Search with recursion and find out using max.                                                                                                    |
+| 061 | Easy | [Same Tree](https://leetcode.com/problems/same-tree/description/)                                    | Use Depth For Search with recursion.                                                                                                    |
+| 062 | Easy | [Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/)                                     | Use Depth For Search with swap.                                                                                                  |
+| 066 | Easy | [Subtree of Another Tree](https://leetcode.com/problems/subtree-of-another-tree/)                                     | Use a helper to validate if it is equal, and walk the tree with DFS.                                       |
+| 070 | Easy | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)                                     | Move to the right or left in a loop based on the value of the tree node.       |
 
 
 
