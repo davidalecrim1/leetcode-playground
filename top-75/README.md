@@ -1,7 +1,5 @@
 # Neet Code Blind 75 List
 
-The goal is to use this problem list to Pareto the best problems to learn the most about data structures and algorithms.
-
 ## Notes
 
 | ID  | Name   | Difficulty                                                                                                         | Notes                                                                                                                                                                         |
@@ -12,6 +10,7 @@ The goal is to use this problem list to Pareto the best problems to learn the mo
 | 004 | Medium | [217. Contains Duplicate](https://leetcode.com/problems/product-of-array-except-self/description/)                 | Create a prefix and postfix slice. Pad the edges with 1. Calculate using n-1 and n+1.                                                                                         |
 | 005 | Easy   | [53. Maximum Subarray ](https://leetcode.com/problems/maximum-subarray/description/)                               | Use a "sliding window" and check if the curent sum if below zero to reset to throw out the numbers.                                                                           |
 | 006 | Medium | [152. Maximum Product Subarray](https://leetcode.com/problems/maximum-product-subarray/description/)               | Calculate the maximum product and minimum product to handle positive and negative numbers.                                                                                    |
+| 009 | Medium | [15. 3Sum](https://leetcode.com/problems/3sum/)                                                                    | Sort the array, and use a fixed number to solve the two sum using left and right pointers.                                                                                    |
 | 011 | Easy   | [371. Sum of Two Integers](https://leetcode.com/problems/sum-of-two-integers/description/)                         | Use binary sum with XOR and AND with shift to the left.                                                                                                                       |
 | 012 | Easy   | [191. Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/description/)                               | Parse to base 2 (go: strconv) and use count of values.                                                                                                                        |
 | 014 | Easy   | [268. Missing Number](https://leetcode.com/problems/missing-number/description/)                                   | Solution 1: calculate the sum of the array minus the given array using a variable with len(nums); solution 2: sort the array and check with the index (but it is O(n log n)). |
