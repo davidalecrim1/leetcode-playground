@@ -13,7 +13,7 @@ if true, I keep trying the rest until both is true to return true.
 Otherwise, I return false.
 */
 
-func workBreak(s string, wordDict []string) bool {
+func wordBreak(s string, wordDict []string) bool {
 	wordMap := make(map[string]struct{})
 
 	for _, word := range wordDict {
@@ -42,5 +42,5 @@ func backtrack(s string, wordMap map[string]struct{}) bool {
 func main() {
 	s := "leetcode"
 	wordDict := []string{"leet", "code"}
-	fmt.Println(workBreak(s, wordDict)) // true
+	fmt.Println(wordBreak(s, wordDict)) // true
 }
