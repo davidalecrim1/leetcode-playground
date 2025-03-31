@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 func rob(nums []int) int {
 	// Approach 1: Apply DP
 
