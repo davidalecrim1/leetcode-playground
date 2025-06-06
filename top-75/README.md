@@ -58,6 +58,8 @@
 | 068 | Medium                   | [98. Validate Binary Search Tree](https://leetcode.com/problems/validate-binary-search-tree/description/)                                                  | Walk the tree using recursion with a minimum and a maximum between the walk for left and right nodes.                   |
 | 069 | Medium                   | [230. Kth Smallest Element in a BST](https://leetcode.com/problems/kth-smallest-element-in-a-bst/description/)                                                  | Walk using recursion to traverse with a in-order approach (left, self, right) using a counter or a queue to save the targeted K element.        |
 | 070 | Easy                   | [Lowest Common Ancestor of a Binary Search Tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree)     | Move to the right or left in a loop based on the value of the tree node.                                                                                                      |
+| 071 | Medium                   | [208. Implement Trie (Prefix Tree)](https://leetcode.com/problems/implement-trie-prefix-tree/description/)     | Use hashmaps and a linked list structure like approach.                                                          |
+| 072 | Medium                   | [211. Design Add and Search Words Data Structure](https://leetcode.com/problems/design-add-and-search-words-data-structure/description/) | Use a prefix tree (trie) with a DFS in the search method.                                                                                                      |
 
 
 
