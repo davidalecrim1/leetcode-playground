@@ -2,6 +2,8 @@ package main
 
 import "fmt"
 
+// Time Complexity: O(n)
+// Space Complxity: O(n)
 func topKFrequent(nums []int, k int) []int {
 	hm := make(map[int]int)
 
