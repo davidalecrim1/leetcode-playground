@@ -1,5 +1,7 @@
 package main
 
+// Time Complexity: O(n)
+// Space Complexity: O(n)
 func rob(nums []int) int {
 	if len(nums) == 1 {
 		return nums[0]
