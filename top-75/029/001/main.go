@@ -2,7 +2,7 @@ package main
 
 // Time Complexity: O(m * n)
 func pacificAtlantic(heights [][]int) [][]int {
-	// Aproach: DFS with optimized visited notes.
+	// Approach: DFS with optimized visited notes.
 	// Also, start bottom up on each side.
 
 	// If this was a pure DFS, it would be O(m * n)^2.
