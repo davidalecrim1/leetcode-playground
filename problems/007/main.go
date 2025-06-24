@@ -20,7 +20,7 @@ func reverse(x int) int {
 		mod := x % 10
 		x = x / 10
 
-		if y > (math.MaxInt32-mod)/10 || y < (math.MinInt32-mod)/10 {
+		if y > (math.MaxInt32-mod)/10 {
 			return 0
 		}
 
