@@ -11,7 +11,6 @@ func reverse(x int) int {
 	x = int(math.Abs(float64(x)))
 
 	for x != 0 {
-		// 123
 		mod := x % 10
 		x /= 10
 
