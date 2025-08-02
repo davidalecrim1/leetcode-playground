@@ -1,29 +1,31 @@
 package main
 
 // Time: O(n)
-// Space: O(n)
-func lengthOfLongestSubstring(s string) int {
-	/*
-	   Strategy:
+// Space: O(1)
+func characterReplacement(s string, k int) int {
+	// Strategy
+	// Use k as a tolerance
+	// Apply a sliding window algorithm
+	// When the window is invalid, move the left pointer.
+	// Use a variable to keep track of the longest char
+	// Use a hashmap to count the chars in place
 
-	   Using a hashmap to keep track of seen
-	   If a new caracter has been seen, move the left pointer
-
-	   sliding window
-	   update the res on each interation
-	*/
-
+	count := make(map[byte]int, len(s))
 	left := 0
-	seen := map[byte]int{}
+	lrcc := 0
 	res := 0
 
 	for right := 0; right < len(s); right++ {
-		if val, ok := seen[s[right]]; ok {
-			left = max(left, val+1)
+		count[s[right]]++
+		lrcc = max(lrcc, count[s[right]])
+
+		tolerance := lrcc + k
+		for right-left+1 > tolerance {
+			count[s[left]]--
+			left++
 		}
 
 		res = max(res, right-left+1)
-		seen[s[right]] = right
 	}
 
 	return res
