@@ -1,3 +1,9 @@
+pub fn main() {
+    let _ = Solution::is_anagram("david", "david");
+}
+
+struct Solution;
+
 impl Solution {
     pub fn is_anagram(s: String, t: String) -> bool {
         let mut s1: Vec<char> = s.chars().collect();
